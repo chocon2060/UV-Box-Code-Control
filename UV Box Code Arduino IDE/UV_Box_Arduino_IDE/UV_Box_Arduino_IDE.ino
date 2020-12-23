@@ -294,15 +294,7 @@ void lcd_print_number(uint8_t number){
   
 } 
 void INT_Stop(){
-  if(digitalRead(up_button) == 1 && digitalRead(down_button) == 1){
-    status_start_button = false;
-    lcd.clear();
-    lcd.setCursor(1,0);
-    lcd.print("! Emergency !");
-    lcd.setCursor(3,1);
-    lcd.print("Timer Stop");
-    analogWrite(UV_led,0);
-    while(digitalRead(menu_button));
+
     delay(2000);
   }
 }
